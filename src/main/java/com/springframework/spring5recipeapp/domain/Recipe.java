@@ -1,6 +1,7 @@
 package com.springframework.spring5recipeapp.domain;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.HashSet;
