@@ -1,15 +1,15 @@
 package com.springframework.spring5recipeapp.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Getter
+@Setter
 @Entity
 @EqualsAndHashCode(exclude = {"recipe"})
-@Data
 public class Ingredient {
 
     @Id
