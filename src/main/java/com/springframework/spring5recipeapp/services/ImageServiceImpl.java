@@ -22,7 +22,8 @@ public class ImageServiceImpl implements ImageService{
     @Override
     @Transactional
     public void saveImageFile(Long recipeId, MultipartFile file) {
-        try{
+
+        try {
             Recipe recipe = recipeRepository.findById(recipeId).get();
 
             Byte[] byteObjects = new Byte[file.getBytes().length];
@@ -36,9 +37,11 @@ public class ImageServiceImpl implements ImageService{
             recipe.setImage(byteObjects);
 
             recipeRepository.save(recipe);
-        } catch (IOException E) {
-            log.error("Error has occurred", E);
-            E.printStackTrace();
+        } catch (IOException e) {
+            //todo handle better
+            log.error("Error occurred", e);
+
+            e.printStackTrace();
         }
     }
 }
