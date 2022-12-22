@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 src/main/java/com/springframework/spring5recipeapp/bootstrap
 *.properties
+*.yml
 
 ### STS ###
 .apt_generated
